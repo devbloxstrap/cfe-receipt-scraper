@@ -1,0 +1,8 @@
+render.yaml
+services:
+  - type: web
+    name: cfe-scraper
+    env: python
+    buildCommand: "pip install -r requirements.txt && playwright install"
+    startCommand: "gunicorn app:app"
+    plan: free
